@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+</head>
+<body>
+    <div class="workspace-container">
+        <div class="workspace-animation">
+            <!-- Replace this with your Lottie animation embed -->
+            <img src="your-workspace-illustration.png" alt="Digital Workspace" />
+        </div>
+    
+        <div class="typing-box">
+            <span id="typed"></span>
+        </div>
+    </div>
+
+    <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_5jxqjx.json" background="transparent" speed="1"
+        style="width: 400px; height: 400px;" loop autoplay>
+    </lottie-player>
+
+      
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  font-family: 'Fira Code', monospace;
+  color: #f8f8f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.workspace-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.workspace-animation img {
+  width: 400px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(0, 255, 234, 0.35);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.workspace-animation img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 50px rgba(0, 255, 234, 0.55);
+}
+
+.typing-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 255, 234, 0.2);
+  color: #00ff88;
+  width: 500px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  overflow: hidden;
+  animation: scaleIn 1.2s ease forwards;
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.workspace-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 234, 0.3);
+  }
+
+</style>
+
+<script>
+    var typed = new Typed("#typed", {
+            strings: [
+                "Hello World! 👋",
+                "I'm Avneesh Kumar.",
+                "A passionate developer & tech enthusiast.",
+                "Currently pursuing BCA and building cool stuff on the web.",
+                "I code. I design. I vibe with music. 🎶"
+            ],
+            typeSpeed: 45,
+            backSpeed: 20,
+            backDelay: 800,
+            startDelay: 500,
+            showCursor: true,
+            cursorChar: "_",
+            loop: false
+        });
+
+
+</script>
+</html>
